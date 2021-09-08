@@ -11,4 +11,8 @@ public interface CheckItemService {
                         String queryString);
 
   public   void delete(Integer id);
+
+    CheckItem findByid(Integer id);
+
+  void edit(CheckItem checkItem);
 }

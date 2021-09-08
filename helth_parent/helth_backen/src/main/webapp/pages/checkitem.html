@@ -230,6 +230,26 @@
             methods: {
                 //编辑
                 handleEdit() {
+                    this.$refs["dataEditForm"].validate((valid) =>{
+                        if (valid){
+                            axios.post("/checkitem/edit.do",this.formData).then((response)=>{
+                                this.dialogFormVisible4Edit = false;
+                                if (response.data.flags){
+                                    this.$message({
+                                        message:response.data.message,
+                                        type:'success'
+                                    })
+                                }else {
+                                    this.$message.error(response.data.message);
+                                }
+                            }).finally(()=>{
+                                this.findPage();
+                            })
+                        }else {
+                            this.$message.error("表单提交失败！！")
+                            return false;
+                        }
+                    })
 
             },
                 //分页查询
@@ -256,8 +276,17 @@
                 },
                 // 弹出编辑窗口
                 handleUpdate(row) {
-                    this.dialogFormVisible4Edit = true;
-                    this.formData =row;
+                    // this.dialogFormVisible4Edit = true;
+                    // this.formData =row;
+                    axios.get("/checkitem/findByid.do?id="+row.id).then((res)=>{
+                        if (res.data.flag){
+
+                            this.dialogFormVisible4Edit = true;
+                            this.formData = res.data.data;
+                        }else {
+                            this.$message.error("获取数据失败，请刷新当前页面！！");
+                        }
+                    })
                 },
                 //切换页码
                 handleCurrentChange(currentPage) {
@@ -270,7 +299,7 @@
                      this.$confirm("你确定要删除么？","提示",{
                          type: "waring"
                      }).then( ()=>{
-                         axios.post("/checkitem/delete.do?id="+row.id).then((res)=>{
+                         axios.get("/checkitem/delete.do?id="+row.id).then((res)=>{
                              if( !res.data.flag){
                                  this.$message.error(res.data.message);
                          }else{

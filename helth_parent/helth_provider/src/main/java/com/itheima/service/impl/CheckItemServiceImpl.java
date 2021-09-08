@@ -38,4 +38,15 @@ public class CheckItemServiceImpl implements CheckItemService {
         checkItemDao.deleteBychectimId(id);
     }
 
+    @Override
+    public CheckItem findByid(Integer id) {
+        CheckItem byid = checkItemDao.findByid(id);
+        return byid;
+    }
+
+    @Override
+    public void edit(CheckItem checkItem) {
+        checkItemDao.edit(checkItem);
+    }
+
 }
