@@ -291,9 +291,20 @@
                 },
                 // 重置表单
                 resetForm() {
+                    this.formData={};
                 },
                 // 弹出添加窗口
                 handleCreate() {
+                    this.resetForm();
+                    this.dialogFormVisible = true;
+                    this.activeName = "first";
+                    axios.get("/checkitem/findAll.do").then((res) =>{
+                        if (res.data.flag){
+                            this.tableData = res.data.data;
+                        }else {
+                            this.$message.error(res.data.message);
+                        }
+                    })
                 },
                 // 弹出编辑窗口
                 handleUpdate(row) {
