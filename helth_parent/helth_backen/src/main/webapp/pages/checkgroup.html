@@ -285,6 +285,21 @@
                 },
                 //添加
                 handleAdd () {
+
+                    axios.post("/checkgroup/add.do?checkitemIds="+this.checkitemIds,this.formData).then((response)=>{
+                        this.dialogFormVisible = false;
+                        if (response.data.flag){
+                            this.message({
+                                type:"success",
+                                message:response.data.message
+                            })
+                        }else {
+                            this.message.error(response.data.message);
+                        }
+                    }).finally(()=>{
+                        this.resetForm();
+                        this.findPage();
+                    })
                 },
                 //分页查询
                 findPage() {
@@ -295,7 +310,7 @@
                 },
                 // 弹出添加窗口
                 handleCreate() {
-                    this.resetForm();
+                    // this.resetForm();
                     this.dialogFormVisible = true;
                     this.activeName = "first";
                     axios.get("/checkitem/findAll.do").then((res) =>{
