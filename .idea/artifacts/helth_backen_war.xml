@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helth_backen:war">
+    <output-path>$PROJECT_DIR$/helth_parent/helth_backen/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helth_backen</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helth_backen-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="helth_backen:war exploded" />
+    </root>
+  </artifact>
+</component>

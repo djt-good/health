@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="helth_interface" />
+        <module name="helth_common" />
+        <module name="helth_backen" />
+        <module name="helth_provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend" target="1.8" />
+      <module name="helth_backen" target="1.8" />
+      <module name="helth_backend" target="1.8" />
+      <module name="helth_common" target="1.8" />
+      <module name="helth_interface" target="1.8" />
+      <module name="helth_parent" target="1.8" />
+      <module name="helth_provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="helth_provider" options="" />
+    </option>
+  </component>
+</project>

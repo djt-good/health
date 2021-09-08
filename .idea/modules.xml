@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/helth_parent/helth_backen/helth_backen.iml" filepath="$PROJECT_DIR$/helth_parent/helth_backen/helth_backen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helth_parent/helth_common/helth_common.iml" filepath="$PROJECT_DIR$/helth_parent/helth_common/helth_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helth_parent/helth_interface/helth_interface.iml" filepath="$PROJECT_DIR$/helth_parent/helth_interface/helth_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helth_parent/helth_parent.iml" filepath="$PROJECT_DIR$/helth_parent/helth_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helth_parent/helth_provider/helth_provider.iml" filepath="$PROJECT_DIR$/helth_parent/helth_provider/helth_provider.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+# Project exclude paths
+/helth_parent/helth_backen/target/
+/helth_parent/helth_common/target/
+/helth_parent/helth_interface/target/
+/helth_parent/helth_provider/target/

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helth_provider:war">
+    <output-path>$PROJECT_DIR$/helth_parent/helth_provider/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>helth_provider</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="helth_provider-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="helth_provider:war exploded" />
+    </root>
+  </artifact>
+</component>
