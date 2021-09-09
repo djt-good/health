@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service(interfaceClass = CheckGroupService.class)
-//@Transactional
+//@Transactional、、
 public class CheckGroupServiceImpl implements CheckGroupService {
     @Autowired
     CheckGroupDao checkGroupDao;
