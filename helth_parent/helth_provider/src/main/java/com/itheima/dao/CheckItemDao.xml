@@ -22,7 +22,7 @@
     <delete id="deleteBychectimId" >
         delete from  t_checkitem  where  id=#{id}
     </delete>
-<select id="findByid" resultType="com.itheima.pojo.CheckItem" parameterType="int">
+<select id="findByid" resultType="com.itheima.pojo.CheckGroup" parameterType="int">
     select * from t_checkitem where id = #{id}
 </select>
     <update id="edit" parameterType="com.itheima.pojo.CheckItem">
