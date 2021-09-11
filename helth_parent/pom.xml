@@ -12,6 +12,7 @@
         <module>helth_interface</module>
         <module>helth_provider</module>
          <module>helth_backen</module>
+        <module>helth_jobs</module>
     </modules>
         <packaging>pom</packaging>
     <properties>

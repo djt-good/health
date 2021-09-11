@@ -9,13 +9,14 @@ import com.itheima.entity.PageResult;
 import com.itheima.pojo.CheckGroup;
 import com.itheima.service.CheckGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Service(interfaceClass = CheckGroupService.class)
-//@Transactional、、
+@Transactional
 public class CheckGroupServiceImpl implements CheckGroupService {
     @Autowired
     CheckGroupDao checkGroupDao;
@@ -80,7 +81,10 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     public void delete(Integer id) {
         checkGroupDao.delete(id);
         checkGroupDao.deleteAssociation(id);
+    }
 
-
+    @Override
+    public List<CheckGroup> findAll() {
+       return checkGroupDao.findAll();
     }
 }
